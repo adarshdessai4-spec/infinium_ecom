@@ -494,8 +494,51 @@ img {
   background: #f9f8ff;
   padding: 12px 16px 0;
 }
-.mobile-section { display: none; }
-.mobile-section.active { display: grid; gap: 12px; }
+
+.mobile-banner {
+  background: linear-gradient(135deg, #b568ff, #8f6bff);
+  color: #fff;
+  padding: 12px 14px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  box-shadow: var(--shadow);
+}
+
+.banner-text {
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.banner-btn {
+  background: #fff;
+  color: #7c5af6;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-weight: 800;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+}
+.mobile-section {
+  display: none;
+}
+
+.mobile-section.active {
+  display: grid;
+  gap: 12px;
+}
+
+.mobile-section.animate {
+  animation: slideIn 0.35s ease;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
 
 .mobile-offer {
   background: linear-gradient(135deg, #6a4bff, #8f6bff);
