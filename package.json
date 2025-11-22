@@ -1,19 +1,12 @@
 {
   "name": "infinium_skin_hair_ecom",
   "version": "1.0.0",
-  "description": "Static Infinium landing page with npm dev server",
-  "main": "index.html",
+  "description": "Infinium Skin & Hair Clinic static website",
+  "main": "server.js",
   "scripts": {
-    "start": "lite-server",
-    "test": "echo \"No tests yet\" && exit 0"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "lite-server": "^2.6.1"
+    "start": "node server.js"
   },
   "dependencies": {
-    "moment": "^2.30.1"
+    "express": "^4.21.0"
   }
 }
