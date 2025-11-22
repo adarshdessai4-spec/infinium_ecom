@@ -628,6 +628,18 @@ img {
   height: 72px;
   border-radius: 50%;
   box-shadow: var(--shadow);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #f0f0f0;
+}
+
+.cat-avatar.weight {
+  background-image: url('./assets/weight.png');
+}
+
+.cat-avatar.hair {
+  background-image: url('./assets/hair.png');
 }
 
 .mobile-hero {
@@ -637,32 +649,6 @@ img {
   display: grid;
   gap: 8px;
   box-shadow: var(--shadow);
-}
-
-.kids-pill-bar {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  background: #dcd2ff;
-  border-radius: 26px;
-  padding: 4px;
-  box-shadow: var(--shadow);
-}
-
-.kids-pill {
-  text-align: center;
-  padding: 10px;
-  border-radius: 22px;
-  font-weight: 800;
-  color: #b5a3ff;
-}
-
-.kids-pill.active {
-  background: #7c5af6;
-  color: #fff;
-}
-
-.kids-pill.kids-left {
-  background: #edeaf8;
 }
 
 .kids-row .brand-mobile {
