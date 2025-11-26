@@ -6,37 +6,50 @@
   <title>Infinium | Skin & Hair E-Commerce</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="notice-bar desktop-only">
-    <div class="notice-content">
-      <span>With GST 2.0 implemented, Infinium brings you revised prices as per government rules</span>
-      <button class="pill ghost light">Shop Now</button>
+    <div class="shell notice-content">
+      <div class="notice-copy">
+        <span class="pill-chip">Update</span>
+        <p>GST 2.0 pricing is live — transparent, regulation-ready checkout.</p>
+      </div>
+      <div class="notice-actions">
+        <button class="pill ghost light">View price list</button>
+        <button class="pill primary">Shop Now</button>
+      </div>
     </div>
   </div>
+
   <header class="top-bar desktop-only">
-    <div class="top-primary">
-      <button class="icon-button" aria-label="Open menu">
-        <span class="icon-lines"></span>
-      </button>
-      <div class="brand">
-        <span class="brand-main">Infinium</span>
-        <span class="brand-pill">kids</span>
+    <div class="shell top-primary">
+      <div class="brand-group">
+        <button class="icon-button" aria-label="Open menu">
+          <span class="icon-lines"></span>
+        </button>
+        <div class="brand">
+          <span class="brand-main">Infinium</span>
+          <span class="brand-pill">kids</span>
+        </div>
       </div>
+
       <div class="search">
         <span class="icon">S</span>
-        <input type="text" placeholder="Search for wellness, hair, or skin care">
+        <input type="text" placeholder="Search for nutrition, hair or skin care" aria-label="Search">
       </div>
+
       <div class="top-actions">
         <span class="icon" title="Shipping">Ship</span>
         <span class="icon" title="Cart">Cart</span>
         <span class="icon" title="Account">Acct</span>
+        <button class="pill ghost">Track order</button>
         <button class="pill primary">Shop All</button>
       </div>
     </div>
-    <nav class="top-secondary">
+
+    <nav class="shell top-secondary">
       <a href="#builder" class="nav-pill">Build Your Own Box</a>
       <a href="#concern" class="nav-pill">Shop By Concern</a>
       <a href="#category" class="nav-pill">Shop By Category</a>
@@ -51,6 +64,123 @@
 
   <main>
     <section class="mobile-shell mobile-only">
+      <div class="mobile-menu-overlay" id="mobile-menu">
+        <div class="menu-header">
+          <div class="menu-avatar"></div>
+          <div>
+            <div class="menu-hey">Hey Infinium</div>
+            <a class="menu-login" href="#">Login</a>
+          </div>
+          <button class="menu-close" id="menu-close" aria-label="Close menu">✕</button>
+        </div>
+        <div class="menu-list">
+          <div class="box-accordion mobile-box-accordion open" data-group="mobile">
+            <button class="box-accordion__toggle" type="button" aria-expanded="true">
+              <div class="box-accordion__title">
+                <span class="box-emoji" aria-hidden="true">🎁</span>
+                <span>Build Your Own Box</span>
+              </div>
+              <span class="box-caret" aria-hidden="true"></span>
+            </button>
+            <ul class="box-accordion__list">
+              <li><button class="box-option-button" type="button" data-option="box5">Box Of 5 At ₹ 1400</button></li>
+              <li><button class="box-option-button" type="button" data-option="box4">Box Of 4 At ₹ 1200</button></li>
+              <li><button class="box-option-button" type="button" data-option="mini4">Box Of 4 Mini At ₹ 499</button></li>
+              <li><button class="box-option-button" type="button" data-option="hair3">3 Hair Products At ₹ 1099</button></li>
+              <li><button class="box-option-button" type="button" data-option="gift4">Gift Box Of 4 At ₹ 1300</button></li>
+            </ul>
+          </div>
+          <div class="box-accordion mobile-box-accordion" data-group="mobile">
+            <button class="box-accordion__toggle" type="button" aria-expanded="false">
+              <div class="box-accordion__title">
+                <span>Shop By Concern</span>
+              </div>
+              <span class="box-caret" aria-hidden="true"></span>
+            </button>
+            <ul class="box-accordion__list" hidden>
+              <li>Weight</li>
+              <li>Dull &amp; Frizz</li>
+              <li>Pre-Workout</li>
+              <li>Post-Workout</li>
+              <li>Performance</li>
+              <li>Hair Growth</li>
+              <li>Daily Wellness</li>
+              <li>Dry &amp; Dull Skin</li>
+              <li>Pigmentation And Dark Spots</li>
+              <li>Dark Circles</li>
+              <li>Acne Care</li>
+              <li>Anti Ageing</li>
+              <li>Hairfall &amp; Thinning</li>
+              <li>Anti-Dandruff</li>
+              <li>Damage Repair</li>
+            </ul>
+          </div>
+          <div class="box-accordion mobile-box-accordion" data-group="mobile">
+            <button class="box-accordion__toggle" type="button" aria-expanded="false">
+              <div class="box-accordion__title">
+                <span>Shop By Category</span>
+              </div>
+              <span class="box-caret" aria-hidden="true"></span>
+            </button>
+            <ul class="box-accordion__list category-list" hidden>
+              <li><span>Nutrition</span><span class="plus-icon">+</span></li>
+              <li><span>SkinCare</span><span class="plus-icon">+</span></li>
+              <li><span>Accessories</span><span class="plus-icon">+</span></li>
+              <li><span>Body Care</span><span class="plus-icon">+</span></li>
+              <li><span>Hair</span><span class="plus-icon">+</span></li>
+            </ul>
+          </div>
+          <div class="box-accordion mobile-box-accordion" data-group="mobile">
+            <button class="box-accordion__toggle" type="button" aria-expanded="false">
+              <div class="box-accordion__title">
+                <span>Shop By Plant</span>
+              </div>
+              <span class="box-caret" aria-hidden="true"></span>
+            </button>
+            <ul class="box-accordion__list category-list" hidden>
+              <li><span>Pineapple</span><span class="plus-icon">+</span></li>
+              <li><span>Rosemary</span><span class="plus-icon">+</span></li>
+              <li><span>Jamun</span><span class="plus-icon">+</span></li>
+              <li><span>Guava</span><span class="plus-icon">+</span></li>
+              <li><span>Pomegranate</span><span class="plus-icon">+</span></li>
+              <li><span>Neem</span><span class="plus-icon">+</span></li>
+              <li><span>Avocado</span><span class="plus-icon">+</span></li>
+              <li><span>Watermelon</span><span class="plus-icon">+</span></li>
+              <li><span>Hibiscus</span><span class="plus-icon">+</span></li>
+              <li><span>Peaches &amp; Lemon</span><span class="plus-icon">+</span></li>
+              <li><span>Flaxseed</span><span class="plus-icon">+</span></li>
+            </ul>
+          </div>
+          <div class="box-accordion mobile-box-accordion kids-accordion" data-group="mobile">
+            <button class="box-accordion__toggle" type="button" aria-expanded="false">
+              <div class="box-accordion__title">
+                <span>Plix Kids</span>
+              </div>
+              <span class="box-caret" aria-hidden="true"></span>
+            </button>
+            <ul class="box-accordion__list category-list" hidden>
+              <li><span>Nutrition</span><span class="plus-icon">+</span></li>
+              <li><span>Personal Care</span><span class="plus-icon">+</span></li>
+            </ul>
+          </div>
+          <button class="menu-item emoji">😄 Mini Store</button>
+          <button class="menu-item emoji">🥳 New Launches</button>
+          <button class="menu-item emoji">💖 Gifting</button>
+          <button class="menu-item emoji">🔥 Hot Pricing</button>
+          <button class="menu-item emoji">🌱 Loyalty Membership</button>
+          <button class="menu-item emoji">💯 All Products</button>
+          <button class="menu-item">Patch Test Guide</button>
+        </div>
+        <div class="menu-list secondary">
+          <a class="menu-link icon phone" href="#">Download The App</a>
+          <a class="menu-link icon chat" href="#">Blogs</a>
+          <a class="menu-link icon truck" href="#">Track Order</a>
+          <a class="menu-link icon info" href="#">Our Story</a>
+          <a class="menu-link icon wallet" href="#">Wallet</a>
+          <a class="menu-link icon call" href="#">Contact Us</a>
+        </div>
+      </div>
+
       <div class="mobile-banner">
         <div class="banner-text">Enjoy a Free Gift with Every Order! 🎁</div>
         <button class="banner-btn">Shop Now</button>
@@ -166,30 +296,52 @@
             <span class="dot"></span>
             <span class="dot"></span>
             <span class="dot"></span>
+            <span class="dot"></span>
           </div>
         </div>
       </div>
     </section>
 
     <section class="hero-banner">
-      <div class="hero-bg">
+      <div class="shell hero-bg">
         <div class="hero-copy">
-          <h1>Win over winter dandruff in just <span class="accent">8 weeks!</span></h1>
-          <p class="lead">Plant-powered care for clean, calm scalps—crafted for every season.</p>
+          <div class="eyebrow">Clinically proven, plant-first</div>
+          <h1>Win over winter dandruff in <span class="accent">8 weeks</span> with calm, balanced care.</h1>
+          <p class="lead">Dermatologist-formulated routines for scalps, skin, and strands that deserve a softer season.</p>
+          <div class="hero-actions">
+            <button class="pill primary">Explore scalp care</button>
+            <button class="pill ghost">Speak to an expert</button>
+          </div>
           <div class="hero-marquee">
-            <span>Shop Now</span>
+            <span>Free doctor consults</span>
             <span>✦</span>
-            <span>Shop Now</span>
+            <span>Ships in 24 hours</span>
             <span>✦</span>
-            <span>Shop Now</span>
+            <span>Visible results</span>
             <span>✦</span>
-            <span>Shop Now</span>
+            <span>Clean ingredients</span>
           </div>
         </div>
         <div class="hero-figures">
           <div class="hero-figure left"></div>
           <div class="hero-figure right"></div>
           <div class="hero-product"></div>
+          <div class="hero-facts">
+            <div>
+              <p class="fact-kicker">98% saw calmer scalp</p>
+              <p class="fact-copy">Based on a 4-week home-use study with 180 participants.</p>
+            </div>
+            <div class="fact-metrics">
+              <div>
+                <p class="metric-value">1M+</p>
+                <p class="metric-label">Daily routines</p>
+              </div>
+              <div>
+                <p class="metric-value">250+</p>
+                <p class="metric-label">Clinically safe SKUs</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="hero-dots">
@@ -202,324 +354,442 @@
     </section>
 
     <section class="brand-proof">
-      <h2>India's Leading <span class="accent-text">Beauty</span> & Wellness Brand</h2>
-      <div class="proof-grid">
-        <div class="proof-card">
-          <div class="proof-icon">CL</div>
-          <p>Clean Label Certified</p>
+      <div class="shell brand-proof-inner">
+        <div class="proof-heading">
+          <h2>India's Leading <span class="accent-text">Beauty</span> & Wellness Brand</h2>
+          <p>We build plant-powered systems that are science-backed, transparent, and fun to use.</p>
         </div>
-        <div class="proof-card">
-          <div class="proof-icon">PB</div>
-          <p>Natural & Plant Based</p>
-        </div>
-        <div class="proof-card">
-          <div class="proof-icon">FD</div>
-          <p>Free Diet Plans</p>
+        <div class="proof-grid">
+          <div class="proof-card">
+            <div class="proof-icon">CL</div>
+            <p>Clean Label Certified</p>
+          </div>
+          <div class="proof-card">
+            <div class="proof-icon">PB</div>
+            <p>Natural & Plant Based</p>
+          </div>
+          <div class="proof-card">
+            <div class="proof-icon">FD</div>
+            <p>Free Diet Plans</p>
+          </div>
+          <div class="proof-card">
+            <div class="proof-icon">CO</div>
+            <p>Co-created with dermatologists</p>
+          </div>
         </div>
       </div>
     </section>
 
     <section id="pricing" class="section under-club">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow">Top Pick</p>
-          <h2>Under Rs 299 Club</h2>
+      <div class="shell">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Top Pick</p>
+            <h2>Under Rs 299 Club</h2>
+          </div>
+          <a class="link-arrow" href="#pricing">Shop all -></a>
         </div>
-        <a class="link-arrow" href="#pricing">Shop all -></a>
-      </div>
-      <div class="carousel small" data-target="club">
-        <button class="carousel-arrow prev" aria-label="Previous products">&lt;</button>
-        <div class="carousel-track">
-          <article class="product-card tall">
-            <div class="card-badge highlight">Top Pick</div>
-            <div class="product-thumb gradient-rose"></div>
-            <h3>Mini Guava Glow Duo</h3>
-            <p class="subtle">Pack of 2 | Top Pick</p>
-            <div class="price-row">
-              <span class="old">Rs 350</span>
-              <span class="price">Rs 299</span>
-            </div>
-            <button class="pill ghost">+ Add</button>
-          </article>
-          <article class="product-card tall">
-            <div class="card-badge highlight">Top Pick</div>
-            <div class="product-thumb gradient-avocado"></div>
-            <h3>Mini Avocado Cleanser</h3>
-            <p class="subtle">Pack of 1</p>
-            <div class="price-row">
-              <span class="old">Rs 100</span>
-              <span class="price">Rs 99</span>
-            </div>
-            <button class="pill ghost">+ Add</button>
-          </article>
-          <article class="product-card tall">
-            <div class="card-badge highlight">Top Pick</div>
-            <div class="product-thumb gradient-sunset"></div>
-            <h3>Mini 24K Guava Serum</h3>
-            <p class="subtle">Pack of 1</p>
-            <div class="price-row">
-              <span class="old">Rs 300</span>
-              <span class="price">Rs 249</span>
-            </div>
-            <button class="pill ghost">+ Add</button>
-          </article>
-          <article class="product-card tall">
-            <div class="card-badge highlight">Top Pick</div>
-            <div class="product-thumb gradient-lemon"></div>
-            <h3>Mini Pineapple Serum</h3>
-            <p class="subtle">Pack of 1</p>
-            <div class="price-row">
-              <span class="old">Rs 280</span>
-              <span class="price">Rs 249</span>
-            </div>
-            <button class="pill ghost">+ Add</button>
-          </article>
+        <div class="carousel small" data-target="club">
+          <button class="carousel-arrow prev" aria-label="Previous products">&lt;</button>
+          <div class="carousel-track">
+            <article class="product-card tall">
+              <div class="card-badge highlight">Top Pick</div>
+              <div class="product-thumb gradient-rose"></div>
+              <h3>Mini Guava Glow Duo</h3>
+              <p class="subtle">Pack of 2 | Top Pick</p>
+              <div class="price-row">
+                <span class="old">Rs 350</span>
+                <span class="price">Rs 299</span>
+              </div>
+              <button class="pill ghost">+ Add</button>
+            </article>
+            <article class="product-card tall">
+              <div class="card-badge highlight">Top Pick</div>
+              <div class="product-thumb gradient-avocado"></div>
+              <h3>Mini Avocado Cleanser</h3>
+              <p class="subtle">Pack of 1</p>
+              <div class="price-row">
+                <span class="old">Rs 100</span>
+                <span class="price">Rs 99</span>
+              </div>
+              <button class="pill ghost">+ Add</button>
+            </article>
+            <article class="product-card tall">
+              <div class="card-badge highlight">Top Pick</div>
+              <div class="product-thumb gradient-sunset"></div>
+              <h3>Mini 24K Guava Serum</h3>
+              <p class="subtle">Pack of 1</p>
+              <div class="price-row">
+                <span class="old">Rs 300</span>
+                <span class="price">Rs 249</span>
+              </div>
+              <button class="pill ghost">+ Add</button>
+            </article>
+            <article class="product-card tall">
+              <div class="card-badge highlight">Top Pick</div>
+              <div class="product-thumb gradient-lemon"></div>
+              <h3>Mini Pineapple Serum</h3>
+              <p class="subtle">Pack of 1</p>
+              <div class="price-row">
+                <span class="old">Rs 280</span>
+                <span class="price">Rs 249</span>
+              </div>
+              <button class="pill ghost">+ Add</button>
+            </article>
+          </div>
+          <button class="carousel-arrow next" aria-label="Next products">&gt;</button>
         </div>
-        <button class="carousel-arrow next" aria-label="Next products">&gt;</button>
       </div>
     </section>
 
-    <section id="concern" class="section categories">
-      <div class="section-head">
-        <h2>Best Sellers</h2>
-        <div class="tabs">
-          <button class="tab active">Weight</button>
-          <button class="tab">New Launches</button>
-          <button class="tab">Kids</button>
-          <button class="tab">Skin</button>
-          <button class="tab">Daily Wellness</button>
-          <button class="tab">Performance</button>
+    <section id="concern" class="section concern-accordion">
+      <div class="shell">
+        <div class="box-accordion" data-group="main">
+          <button class="box-accordion__toggle" type="button" aria-expanded="false">
+            <div class="box-accordion__title">
+              <span>Shop By Concern</span>
+            </div>
+            <span class="box-caret" aria-hidden="true"></span>
+          </button>
+          <ul class="box-accordion__list" hidden>
+            <li>Weight</li>
+            <li>Dull &amp; Frizz</li>
+            <li>Pre-Workout</li>
+            <li>Post-Workout</li>
+            <li>Performance</li>
+            <li>Hair Growth</li>
+            <li>Daily Wellness</li>
+            <li>Dry &amp; Dull Skin</li>
+            <li>Pigmentation And Dark Spots</li>
+            <li>Dark Circles</li>
+            <li>Acne Care</li>
+            <li>Anti Ageing</li>
+            <li>Hairfall &amp; Thinning</li>
+            <li>Anti-Dandruff</li>
+            <li>Damage Repair</li>
+          </ul>
         </div>
-      </div>
-      <div class="carousel" data-target="bestsellers">
-        <button class="carousel-arrow prev" aria-label="Previous products">&lt;</button>
-        <div class="carousel-track">
-          <article class="product-card tall">
-            <div class="card-badge">Weight</div>
-            <div class="product-thumb gradient-berry"></div>
-            <h3>Apple Cider Efferv</h3>
-            <p class="subtle">Pack of 8</p>
-            <div class="price-row">
-              <span class="old">Rs 2,490</span>
-              <span class="price">Rs 1,999</span>
-            </div>
-            <button class="pill ghost">+ Add</button>
-          </article>
-          <article class="product-card tall">
-            <div class="card-badge">Weight</div>
-            <div class="product-thumb gradient-mint"></div>
-            <h3>L-Carnitine ACV</h3>
-            <p class="subtle">Pack of 4</p>
-            <div class="price-row">
-              <span class="old">Rs 1,420</span>
-              <span class="price">Rs 1,299</span>
-            </div>
-            <button class="pill ghost">+ Add</button>
-          </article>
-          <article class="product-card tall">
-            <div class="card-badge">Weight</div>
-            <div class="product-thumb gradient-lime"></div>
-            <h3>Garcinia Cambogia</h3>
-            <p class="subtle">Pack of 4</p>
-            <div class="price-row">
-              <span class="old">Rs 1,245</span>
-              <span class="price">Rs 1,199</span>
-            </div>
-            <button class="pill ghost">+ Add</button>
-          </article>
-          <article class="product-card tall">
-            <div class="card-badge">Weight</div>
-            <div class="product-thumb gradient-aqua"></div>
-            <h3>ACV Multi Power</h3>
-            <p class="subtle">Pack of 4</p>
-            <div class="price-row">
-              <span class="old">Rs 1,245</span>
-              <span class="price">Rs 1,199</span>
-            </div>
-            <button class="pill ghost">+ Add</button>
-          </article>
-        </div>
-        <button class="carousel-arrow next" aria-label="Next products">&gt;</button>
       </div>
     </section>
 
-    <section id="kids" class="section hero-grid">
-      <div class="section-head">
-        <h2>The Secret's Out: Celebs Love It Too!</h2>
-      </div>
-      <div class="cards-grid">
-        <article class="hero-panel gradient-aqua">
-          <div class="panel-image"></div>
-          <div class="panel-overlay">
-            <h3>Rhea's Faves</h3>
-            <button class="pill primary">Shop Now</button>
-          </div>
-        </article>
-        <article class="hero-panel gradient-red">
-          <div class="panel-image"></div>
-          <div class="panel-overlay">
-            <h3>Arjun's Picks</h3>
-            <button class="pill primary">Shop Now</button>
-          </div>
-        </article>
-        <article class="hero-panel gradient-yellow">
-          <div class="panel-image"></div>
-          <div class="panel-overlay">
-            <h3>Sam's Essentials</h3>
-            <button class="pill primary">Shop Now</button>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="builder" class="section pledge">
-      <div class="pledge-card">
-        <div class="pledge-icon">PL</div>
-        <div>
-          <p class="eyebrow">Pledge A Tree</p>
-          <h2>Every order plants more green.</h2>
-          <p class="lead">For every order placed, we support reforestation partners to add more trees to our planet.</p>
-          <button class="pill primary">Learn more</button>
+    <section id="category" class="section category-accordion">
+      <div class="shell">
+        <div class="box-accordion" data-group="main">
+          <button class="box-accordion__toggle" type="button" aria-expanded="false">
+            <div class="box-accordion__title">
+              <span>Shop By Category</span>
+            </div>
+            <span class="box-caret" aria-hidden="true"></span>
+          </button>
+          <ul class="box-accordion__list category-list" hidden>
+            <li><span>Nutrition</span><span class="plus-icon">+</span></li>
+            <li><span>SkinCare</span><span class="plus-icon">+</span></li>
+            <li><span>Accessories</span><span class="plus-icon">+</span></li>
+            <li><span>Body Care</span><span class="plus-icon">+</span></li>
+            <li><span>Hair</span><span class="plus-icon">+</span></li>
+          </ul>
         </div>
       </div>
     </section>
+
+    <section id="plant" class="section category-accordion">
+      <div class="shell">
+        <div class="box-accordion" data-group="main">
+          <button class="box-accordion__toggle" type="button" aria-expanded="false">
+            <div class="box-accordion__title">
+              <span>Shop By Plant</span>
+            </div>
+            <span class="box-caret" aria-hidden="true"></span>
+          </button>
+          <ul class="box-accordion__list category-list" hidden>
+            <li><span>Pineapple</span><span class="plus-icon">+</span></li>
+            <li><span>Rosemary</span><span class="plus-icon">+</span></li>
+            <li><span>Jamun</span><span class="plus-icon">+</span></li>
+            <li><span>Guava</span><span class="plus-icon">+</span></li>
+            <li><span>Pomegranate</span><span class="plus-icon">+</span></li>
+            <li><span>Neem</span><span class="plus-icon">+</span></li>
+            <li><span>Avocado</span><span class="plus-icon">+</span></li>
+            <li><span>Watermelon</span><span class="plus-icon">+</span></li>
+            <li><span>Hibiscus</span><span class="plus-icon">+</span></li>
+            <li><span>Peaches &amp; Lemon</span><span class="plus-icon">+</span></li>
+            <li><span>Flaxseed</span><span class="plus-icon">+</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="kids" class="section kids-accordion">
+      <div class="shell">
+        <div class="box-accordion kids-accordion" data-group="main">
+          <button class="box-accordion__toggle" type="button" aria-expanded="false">
+            <div class="box-accordion__title">
+              <span>Plix Kids</span>
+            </div>
+            <span class="box-caret" aria-hidden="true"></span>
+          </button>
+          <ul class="box-accordion__list category-list" hidden>
+            <li><span>Nutrition</span><span class="plus-icon">+</span></li>
+            <li><span>Personal Care</span><span class="plus-icon">+</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="kids-hero" class="section hero-grid">
+      <div class="shell">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Celebrity-loved staples</p>
+            <h2>The Secret's Out: Celebs Love It Too!</h2>
+          </div>
+        </div>
+        <div class="cards-grid">
+          <article class="hero-panel gradient-aqua">
+            <div class="panel-image"></div>
+            <div class="panel-overlay">
+              <h3>Rhea's Faves</h3>
+              <p>Glowy skin and hair staples curated for the spotlight.</p>
+              <button class="pill primary">Shop Now</button>
+            </div>
+          </article>
+          <article class="hero-panel gradient-red">
+            <div class="panel-image"></div>
+            <div class="panel-overlay">
+              <h3>Arjun's Picks</h3>
+              <p>High-performance nutrition to keep up with the grind.</p>
+              <button class="pill primary">Shop Now</button>
+            </div>
+          </article>
+          <article class="hero-panel gradient-yellow">
+            <div class="panel-image"></div>
+            <div class="panel-overlay">
+              <h3>Sam's Essentials</h3>
+              <p>Everyday skin rituals, gentle enough for any routine.</p>
+              <button class="pill primary">Shop Now</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="builder" class="section builder-accordion">
+      <div class="shell">
+        <div class="box-accordion open" data-group="main">
+          <button class="box-accordion__toggle" type="button" aria-expanded="true">
+            <div class="box-accordion__title">
+              <span class="box-emoji" aria-hidden="true">🎁</span>
+              <span>Build Your Own Box</span>
+            </div>
+            <span class="box-caret" aria-hidden="true"></span>
+          </button>
+          <ul class="box-accordion__list">
+            <li><button class="box-option-button" type="button" data-option="box5">Box Of 5 At ₹ 1400</button></li>
+            <li><button class="box-option-button" type="button" data-option="box4">Box Of 4 At ₹ 1200</button></li>
+            <li><button class="box-option-button" type="button" data-option="mini4">Box Of 4 Mini At ₹ 499</button></li>
+            <li><button class="box-option-button" type="button" data-option="hair3">3 Hair Products At ₹ 1099</button></li>
+            <li><button class="box-option-button" type="button" data-option="gift4">Gift Box Of 4 At ₹ 1300</button></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="builder-modal" id="builder-modal" aria-hidden="true">
+      <div class="builder-modal__backdrop"></div>
+      <div class="builder-modal__sheet">
+        <div class="builder-header">
+          <button class="pill ghost" id="builder-close">← Back</button>
+          <div class="builder-total">
+            <span class="label">Total</span>
+            <span class="value" id="builder-total">₹ 0</span>
+          </div>
+        </div>
+        <h3 class="builder-title" id="builder-title">Pick an option to begin</h3>
+        <p class="builder-note" id="builder-note">Choose a box above to set how many items you can add.</p>
+        <div class="builder-body">
+          <div class="builder-products">
+            <h4>Choose products</h4>
+            <div class="builder-product-grid" id="builder-products"></div>
+          </div>
+          <div class="builder-slots">
+            <h4>Your box</h4>
+            <div class="slot-grid" id="builder-slots"></div>
+            <div class="builder-cta">
+              <span id="builder-status">Select a box option to start adding items.</span>
+              <button class="pill primary" id="builder-add-to-cart" disabled>Add To Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <section id="kids-products" class="section under-club">
-      <div class="section-head">
-        <h2>Thoughtfully Crafted For Kids</h2>
-        <a class="link-arrow" href="#kids-products">Shop all -></a>
-      </div>
-      <div class="tabs">
-        <button class="tab active">Nutrition</button>
-        <button class="tab">Personal Care</button>
-      </div>
-      <div class="carousel small" data-target="kidsline">
-        <button class="carousel-arrow prev" aria-label="Previous products">&lt;</button>
-        <div class="carousel-track">
-          <article class="product-card tall">
-            <div class="card-badge soft">2+ Years</div>
-            <div class="product-thumb gradient-honey"></div>
-            <h3>Grow Buddy Powermix</h3>
-            <p class="subtle">Nutrition</p>
-            <div class="price-row">
-              <span class="price">Rs 485</span>
-            </div>
-            <button class="pill ghost">+ Add</button>
-          </article>
-          <article class="product-card tall">
-            <div class="card-badge soft">3+ Years</div>
-            <div class="product-thumb gradient-midnight"></div>
-            <h3>SuperTots Multivitamin</h3>
-            <p class="subtle">Nutrition</p>
-            <div class="price-row">
-              <span class="price">Rs 530</span>
-            </div>
-            <button class="pill ghost">+ Add</button>
-          </article>
-          <article class="product-card tall">
-            <div class="card-badge soft">4+ Years</div>
-            <div class="product-thumb gradient-sunrise"></div>
-            <h3>Immuno Fizz</h3>
-            <p class="subtle">Nutrition</p>
-            <div class="price-row">
-              <span class="price">Rs 620</span>
-            </div>
-            <button class="pill ghost">+ Add</button>
-          </article>
-          <article class="product-card tall">
-            <div class="card-badge soft">3+ Years</div>
-            <div class="product-thumb gradient-violet"></div>
-            <h3>ChyawanBoost Gummies</h3>
-            <p class="subtle">Nutrition</p>
-            <div class="price-row">
-              <span class="price">Rs 530</span>
-            </div>
-            <button class="pill ghost">+ Add</button>
-          </article>
+      <div class="shell">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Made for little legends</p>
+            <h2>Thoughtfully Crafted For Kids</h2>
+          </div>
+          <a class="link-arrow" href="#kids-products">Shop all -></a>
         </div>
-        <button class="carousel-arrow next" aria-label="Next products">&gt;</button>
+        <div class="tabs">
+          <button class="tab active">Nutrition</button>
+          <button class="tab">Personal Care</button>
+        </div>
+        <div class="carousel small" data-target="kidsline">
+          <button class="carousel-arrow prev" aria-label="Previous products">&lt;</button>
+          <div class="carousel-track">
+            <article class="product-card tall">
+              <div class="card-badge soft">2+ Years</div>
+              <div class="product-thumb gradient-honey"></div>
+              <h3>Grow Buddy Powermix</h3>
+              <p class="subtle">Nutrition</p>
+              <div class="price-row">
+                <span class="price">Rs 485</span>
+              </div>
+              <button class="pill ghost">+ Add</button>
+            </article>
+            <article class="product-card tall">
+              <div class="card-badge soft">3+ Years</div>
+              <div class="product-thumb gradient-midnight"></div>
+              <h3>SuperTots Multivitamin</h3>
+              <p class="subtle">Nutrition</p>
+              <div class="price-row">
+                <span class="price">Rs 530</span>
+              </div>
+              <button class="pill ghost">+ Add</button>
+            </article>
+            <article class="product-card tall">
+              <div class="card-badge soft">4+ Years</div>
+              <div class="product-thumb gradient-sunrise"></div>
+              <h3>Immuno Fizz</h3>
+              <p class="subtle">Nutrition</p>
+              <div class="price-row">
+                <span class="price">Rs 620</span>
+              </div>
+              <button class="pill ghost">+ Add</button>
+            </article>
+            <article class="product-card tall">
+              <div class="card-badge soft">3+ Years</div>
+              <div class="product-thumb gradient-violet"></div>
+              <h3>ChyawanBoost Gummies</h3>
+              <p class="subtle">Nutrition</p>
+              <div class="price-row">
+                <span class="price">Rs 530</span>
+              </div>
+              <button class="pill ghost">+ Add</button>
+            </article>
+          </div>
+          <button class="carousel-arrow next" aria-label="Next products">&gt;</button>
+        </div>
       </div>
     </section>
 
     <section id="testimonials" class="section testimonials">
-      <h2>Real People, Real Results</h2>
-      <div class="testimonials-grid">
-        <article class="testimonial-card yellow">
-          <div class="avatar"></div>
-          <p class="quote">"Go-to fitness drink"</p>
-          <p>Infinium Apple Cider Fizz has been a game-changer. It keeps my energy high and routine simple.</p>
-          <p class="author">- Aarav</p>
-        </article>
-        <article class="testimonial-card green">
-          <div class="avatar"></div>
-          <p class="quote">"New baby hair growth"</p>
-          <p>The rosemary serum made my hair feel stronger and lighter, and I love the fresh scent.</p>
-          <p class="author">- Sana</p>
-        </article>
-        <article class="testimonial-card blue">
-          <div class="avatar"></div>
-          <p class="quote">"Visible glow"</p>
-          <p>Pineapple brightening duo gave me a glow in weeks. Gentle textures, quick results.</p>
-          <p class="author">- Tanya</p>
-        </article>
+      <div class="shell">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Proof of performance</p>
+            <h2>Real People, Real Results</h2>
+          </div>
+        </div>
+        <div class="testimonials-grid">
+          <article class="testimonial-card yellow">
+            <div class="avatar"></div>
+            <p class="quote">"Go-to fitness drink"</p>
+            <p>Infinium Apple Cider Fizz has been a game-changer. It keeps my energy high and routine simple.</p>
+            <p class="author">- Aarav</p>
+          </article>
+          <article class="testimonial-card green">
+            <div class="avatar"></div>
+            <p class="quote">"New baby hair growth"</p>
+            <p>The rosemary serum made my hair feel stronger and lighter, and I love the fresh scent.</p>
+            <p class="author">- Sana</p>
+          </article>
+          <article class="testimonial-card blue">
+            <div class="avatar"></div>
+            <p class="quote">"Visible glow"</p>
+            <p>Pineapple brightening duo gave me a glow in weeks. Gentle textures, quick results.</p>
+            <p class="author">- Tanya</p>
+          </article>
+        </div>
       </div>
     </section>
 
     <section id="fun" class="section fun-panel">
-      <div class="fun-content">
-        <h2>Take Care, Have Fun!</h2>
-        <p class="lead">Making nutrition fun shouldn't mean compromising on clean ingredients. We craft playful blends backed by science.</p>
-        <button class="pill primary">Learn more</button>
-      </div>
-      <div class="fun-badges">
-        <div class="badge-card circle">
-          <span class="badge-icon">V</span>
-          <p>Vegan friendly</p>
+      <div class="shell fun-content-shell">
+        <div class="fun-content">
+          <p class="eyebrow">Manifesto</p>
+          <h2>Take Care, Have Fun!</h2>
+          <p class="lead">Making nutrition fun shouldn't mean compromising on clean ingredients. We craft playful blends backed by science.</p>
+          <button class="pill primary">Learn more</button>
         </div>
-        <div class="badge-card circle">
-          <span class="badge-icon">RE</span>
-          <p>Reusable & recyclable</p>
-        </div>
-        <div class="badge-card circle">
-          <span class="badge-icon">CL</span>
-          <p>Clean label</p>
-        </div>
-        <div class="badge-card circle">
-          <span class="badge-icon">GF</span>
-          <p>Gluten free</p>
+        <div class="fun-badges">
+          <div class="badge-card circle">
+            <span class="badge-icon">V</span>
+            <p>Vegan friendly</p>
+          </div>
+          <div class="badge-card circle">
+            <span class="badge-icon">RE</span>
+            <p>Reusable & recyclable</p>
+          </div>
+          <div class="badge-card circle">
+            <span class="badge-icon">CL</span>
+            <p>Clean label</p>
+          </div>
+          <div class="badge-card circle">
+            <span class="badge-icon">GF</span>
+            <p>Gluten free</p>
+          </div>
         </div>
       </div>
     </section>
 
     <section id="news" class="section news">
-      <h2>Infinium In News</h2>
-      <p class="lead">Powered by clinically backed plant ingredients that care for your body, mind, and soul.</p>
-      <div class="press-logos">
-        <span>FEMINA</span>
-        <span>Times</span>
-        <span>YourStory</span>
-        <span>Business Standard</span>
-        <span>ET</span>
-        <span>Vogue</span>
-      </div>
-      <div class="end-note">
-        <p class="eyebrow">Hey, you reached the end!</p>
-        <h3>Don't forget to take care, have fun!</h3>
+      <div class="shell">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Press</p>
+            <h2>Infinium In News</h2>
+          </div>
+          <p class="lead">Powered by clinically backed plant ingredients that care for your body, mind, and soul.</p>
+        </div>
+        <div class="press-logos">
+          <span>FEMINA</span>
+          <span>Times</span>
+          <span>YourStory</span>
+          <span>Business Standard</span>
+          <span>ET</span>
+          <span>Vogue</span>
+        </div>
+        <div class="end-note">
+          <p class="eyebrow">Hey, you reached the end!</p>
+          <h3>Don't forget to take care, have fun!</h3>
+        </div>
       </div>
     </section>
 
     <section id="about" class="section about">
-      <div class="about-inner">
+      <div class="shell about-inner">
         <div>
           <h2>About Infinium</h2>
           <p>Infinium is India's trusted plant-based wellness brand. Our toxin-free, vegan-friendly formulations fit easily into daily life.</p>
+        </div>
+        <div class="about-grid">
+          <div>
+            <p class="eyebrow">Purpose</p>
+            <p class="lead">Building science-first routines that feel joyful and stay transparent.</p>
+          </div>
+          <div>
+            <p class="eyebrow">Community</p>
+            <p class="lead">1M+ customers, 250+ products, and partnerships with leading dermatologists.</p>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="footer-main">
+    <div class="shell footer-main">
       <div class="footer-brand">
         <div class="brand-mark">Infinium</div>
         <p>Stalk our socials</p>
