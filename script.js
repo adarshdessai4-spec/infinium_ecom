@@ -161,7 +161,7 @@ accordions.forEach((acc) => {
 
 // Build Your Own Box selection logic
 const builderOptions = [
-  { id: 'box5', label: 'Box Of 5 At ₹ 1400', slots: 5, price: 1400 },
+  { id: 'box5', label: '5 In 1 Gift Box', slots: 5, price: 1400 },
   { id: 'box4', label: 'Box Of 4 At ₹ 1200', slots: 4, price: 1200 },
   { id: 'mini4', label: 'Box Of 4 Mini At ₹ 499', slots: 4, price: 499 },
   { id: 'hair3', label: '3 Hair Products At ₹ 1099', slots: 3, price: 1099 },
@@ -169,16 +169,14 @@ const builderOptions = [
 ];
 
 const builderProducts = [
-  { id: 'apple-cider', name: 'Apple Cider Efferv', note: 'Hair & scalp' },
-  { id: 'lcarnitine', name: 'L-Carnitine ACV', note: 'Performance' },
-  { id: 'garcinia', name: 'Garcinia Cambogia', note: 'Weight' },
-  { id: 'acv-multi', name: 'ACV Multi Power', note: 'Daily wellness' },
-  { id: 'grow-buddy', name: 'Grow Buddy Powermix', note: 'Kids' },
-  { id: 'super-tots', name: 'SuperTots Multivitamin', note: 'Kids' },
-  { id: 'immuno-fizz', name: 'Immuno Fizz', note: 'Immunity' },
-  { id: 'chyawan', name: 'ChyawanBoost Gummies', note: 'Nutrition' },
-  { id: 'guava-serum', name: 'Mini Guava Glow Duo', note: 'Skin' },
-  { id: 'pineapple', name: 'Mini Pineapple Serum', note: 'Skin' },
+  { id: 'apple-cider', name: 'Apple Cider Vinegar', note: 'Skin', price: 310, rating: 5.0, image: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=600&q=80' },
+  { id: 'watermelon', name: 'Watermelon Glowy Skin', note: 'Skin', price: 575, rating: 5.0, image: 'https://images.unsplash.com/photo-1506617420156-8e4536971650?auto=format&fit=crop&w=600&q=80' },
+  { id: 'pineapple-serum', name: 'Pineapple Face Wash & Serum', note: 'Skin', price: 699, rating: 5.0, image: 'https://images.unsplash.com/photo-1585238341267-1cfec2041459?auto=format&fit=crop&w=600&q=80' },
+  { id: 'jamun-serum', name: 'Jamun Facewash & Serum', note: 'Skin', price: 649, rating: 5.0, image: 'https://images.unsplash.com/photo-1585238341654-637d9fa18b1b?auto=format&fit=crop&w=600&q=80' },
+  { id: 'pineapple-kit', name: 'Pineapple De-Pigmentation Kit', note: 'Skin', price: 999, rating: 5.0, image: 'https://images.unsplash.com/photo-1585238342026-78d387f4a707?auto=format&fit=crop&w=600&q=80' },
+  { id: 'flaxseed', name: 'Flaxseed Ultra Smooth Duo', note: 'Hair', price: 699, rating: 5.0, image: 'https://images.unsplash.com/photo-1585238342026-78d387f4a707?auto=format&fit=crop&w=600&q=80' },
+  { id: 'rosemary-serum', name: 'Rosemary Hair Growth Serum', note: 'Hair', price: 699, rating: 5.0, image: 'https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&w=600&q=80' },
+  { id: 'neem-shampoo', name: 'Neem Anti-Dandruff Shampoo', note: 'Hair', price: 355, rating: 5.0, image: 'https://images.unsplash.com/photo-1619596101816-4ae9f8d6d59f?auto=format&fit=crop&w=600&q=80' },
 ];
 
 const optionButtons = Array.from(document.querySelectorAll('.box-option-button'));
@@ -207,21 +205,48 @@ function renderProducts() {
     const card = document.createElement('div');
     card.className = 'builder-product-card';
 
+    if (product.image) {
+      const img = document.createElement('div');
+      img.className = 'builder-product-img';
+      img.style.backgroundImage = `url('${product.image}')`;
+
+      if (product.rating) {
+        const badge = document.createElement('span');
+        badge.className = 'badge-star';
+        badge.textContent = `★ ${product.rating.toFixed(1)}`;
+        img.appendChild(badge);
+      }
+      card.appendChild(img);
+    }
+
     const title = document.createElement('h5');
     title.textContent = product.name;
 
-    const note = document.createElement('p');
-    note.className = 'subtle';
-    note.textContent = product.note;
+    const meta = document.createElement('p');
+    meta.className = 'product-meta';
+    meta.textContent = `${product.note}`;
+
+    const priceRow = document.createElement('div');
+    priceRow.className = 'builder-price-row';
+    const priceEl = document.createElement('span');
+    priceEl.className = 'price';
+    priceEl.textContent = `₹${product.price}`;
+    const learn = document.createElement('a');
+    learn.href = '#';
+    learn.textContent = 'Learn';
+    learn.className = 'learn-link';
+    priceRow.appendChild(priceEl);
+    priceRow.appendChild(learn);
 
     const button = document.createElement('button');
-    button.className = 'pill ghost';
+    button.className = 'pill ghost builder-add';
     button.type = 'button';
-    button.textContent = '+ Add';
+    button.textContent = '+ ADD TO BOX';
     button.addEventListener('click', () => handleAddProduct(product));
 
     card.appendChild(title);
-    card.appendChild(note);
+    card.appendChild(meta);
+    card.appendChild(priceRow);
     card.appendChild(button);
     productsContainer.appendChild(card);
   });
@@ -254,7 +279,8 @@ function updateSummary() {
   }
   if (addToCartBtn) {
     addToCartBtn.disabled = !builderState.option || filled !== totalSlots || totalSlots === 0;
-    addToCartBtn.textContent = builderState.option ? `Add To Cart (${filled}/${totalSlots})` : 'Add To Cart';
+    addToCartBtn.textContent = builderState.option ? 'Update Box' : 'Add To Cart';
+    addToCartBtn.classList.add('secondary');
   }
 }
 
