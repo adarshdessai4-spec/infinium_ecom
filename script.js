@@ -159,6 +159,17 @@ accordions.forEach((acc) => {
   });
 });
 
+// Open builder from nav link
+document.querySelectorAll('[data-open-builder="true"]').forEach((link) => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    if (builderOptions[0]) {
+      setOption(builderOptions[0].id);
+      openBuilder();
+    }
+  });
+});
+
 // Build Your Own Box selection logic
 const builderOptions = [
   { id: 'box5', label: '5 In 1 Gift Box', slots: 5, price: 1400 },
@@ -201,7 +212,8 @@ const formatCurrency = (value) => `₹ ${value}`;
 function renderProducts() {
   if (!productsContainer) return;
   productsContainer.innerHTML = '';
-  builderProducts.forEach((product) => {
+  const list = window.innerWidth <= 768 ? builderProducts.slice(0, 4) : builderProducts;
+  list.forEach((product) => {
     const card = document.createElement('div');
     card.className = 'builder-product-card';
 
@@ -269,13 +281,7 @@ function updateSummary() {
     totalEl.textContent = builderState.option ? formatCurrency(builderState.option.price) : formatCurrency(0);
   }
   if (statusEl) {
-    if (!builderState.option) {
-      statusEl.textContent = 'Select a box option to start adding items.';
-    } else if (filled < totalSlots) {
-      statusEl.textContent = `${filled}/${totalSlots} items added.`;
-    } else {
-      statusEl.textContent = 'Ready to add to cart.';
-    }
+    statusEl.textContent = builderState.option ? `Total: ₹${builderState.option.price}` : 'Select a box option to start adding items.';
   }
   if (addToCartBtn) {
     addToCartBtn.disabled = !builderState.option || filled !== totalSlots || totalSlots === 0;
