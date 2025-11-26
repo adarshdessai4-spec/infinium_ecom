@@ -94,6 +94,7 @@ document.querySelectorAll('.mobile-search input').forEach((input) => {
 // Mobile hamburger menu toggle
 const menuOverlay = document.getElementById('mobile-menu');
 const menuOpenBtn = document.querySelector('.mobile-icons-row .icon-button');
+const desktopMenuBtn = document.querySelector('.top-bar .icon-button');
 const menuCloseBtn = document.getElementById('menu-close');
 
 function toggleMenu(show) {
@@ -102,7 +103,14 @@ function toggleMenu(show) {
 }
 
 menuOpenBtn?.addEventListener('click', () => toggleMenu(true));
+desktopMenuBtn?.addEventListener('click', () => toggleMenu(true));
 menuCloseBtn?.addEventListener('click', () => toggleMenu(false));
+menuOverlay?.addEventListener('click', (e) => {
+  if (e.target === menuOverlay) toggleMenu(false);
+});
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') toggleMenu(false);
+});
 
 // Accordion behavior (only one open per group)
 const accordions = Array.from(document.querySelectorAll('.box-accordion'));
@@ -344,6 +352,24 @@ function initBuilder() {
 }
 
 initBuilder();
+
+// Desktop Infinium / Infinium kids toggle
+const brandSwitchButtons = document.querySelectorAll('.brand-switch button[data-target]');
+
+brandSwitchButtons.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    const target = btn.dataset.target;
+
+    brandSwitchButtons.forEach((b) => b.classList.toggle('active', b === btn));
+
+    if (target === 'kids') {
+      const kidsSection = document.getElementById('kids-products') || document.getElementById('kids-hero') || document.getElementById('kids');
+      kidsSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  });
+});
 
 function openBuilder() {
   if (!builderModal) return;

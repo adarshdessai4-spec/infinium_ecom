@@ -10,15 +10,128 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="mobile-menu-overlay" id="mobile-menu">
+    <div class="menu-panel">
+      <div class="menu-header">
+        <div class="menu-avatar"></div>
+        <div>
+          <div class="menu-hey">Hey Infinium</div>
+          <a class="menu-login" href="#">Login</a>
+        </div>
+        <button class="menu-close" id="menu-close" aria-label="Close menu">✕</button>
+      </div>
+      <div class="menu-list">
+        <div class="box-accordion mobile-box-accordion" data-group="mobile">
+          <button class="box-accordion__toggle" type="button" aria-expanded="false">
+            <div class="box-accordion__title">
+              <span class="box-emoji" aria-hidden="true">🎁</span>
+              <span>Build Your Own Box</span>
+            </div>
+            <span class="box-caret" aria-hidden="true"></span>
+          </button>
+          <ul class="box-accordion__list" hidden>
+            <li><button class="box-option-button" type="button" data-option="box5">Box Of 5 At ₹ 1400</button></li>
+            <li><button class="box-option-button" type="button" data-option="box4">Box Of 4 At ₹ 1200</button></li>
+            <li><button class="box-option-button" type="button" data-option="mini4">Box Of 4 Mini At ₹ 499</button></li>
+            <li><button class="box-option-button" type="button" data-option="hair3">3 Hair Products At ₹ 1099</button></li>
+            <li><button class="box-option-button" type="button" data-option="gift4">Gift Box Of 4 At ₹ 1300</button></li>
+          </ul>
+        </div>
+        <div class="box-accordion mobile-box-accordion" data-group="mobile">
+          <button class="box-accordion__toggle" type="button" aria-expanded="false">
+            <div class="box-accordion__title">
+              <span>Shop By Concern</span>
+            </div>
+            <span class="box-caret" aria-hidden="true"></span>
+          </button>
+          <ul class="box-accordion__list" hidden>
+            <li>Weight</li>
+            <li>Dull &amp; Frizz</li>
+            <li>Pre-Workout</li>
+            <li>Post-Workout</li>
+            <li>Performance</li>
+            <li>Hair Growth</li>
+            <li>Daily Wellness</li>
+            <li>Dry &amp; Dull Skin</li>
+            <li>Pigmentation And Dark Spots</li>
+            <li>Dark Circles</li>
+            <li>Acne Care</li>
+            <li>Anti Ageing</li>
+            <li>Hairfall &amp; Thinning</li>
+            <li>Anti-Dandruff</li>
+            <li>Damage Repair</li>
+          </ul>
+        </div>
+        <div class="box-accordion mobile-box-accordion" data-group="mobile">
+          <button class="box-accordion__toggle" type="button" aria-expanded="false">
+            <div class="box-accordion__title">
+              <span>Shop By Category</span>
+            </div>
+            <span class="box-caret" aria-hidden="true"></span>
+          </button>
+          <ul class="box-accordion__list category-list" hidden>
+            <li><span>Nutrition</span><span class="plus-icon">+</span></li>
+            <li><span>SkinCare</span><span class="plus-icon">+</span></li>
+            <li><span>Accessories</span><span class="plus-icon">+</span></li>
+            <li><span>Body Care</span><span class="plus-icon">+</span></li>
+            <li><span>Hair</span><span class="plus-icon">+</span></li>
+          </ul>
+        </div>
+        <div class="box-accordion mobile-box-accordion" data-group="mobile">
+          <button class="box-accordion__toggle" type="button" aria-expanded="false">
+            <div class="box-accordion__title">
+              <span>Shop By Plant</span>
+            </div>
+            <span class="box-caret" aria-hidden="true"></span>
+          </button>
+          <ul class="box-accordion__list category-list" hidden>
+            <li><span>Pineapple</span><span class="plus-icon">+</span></li>
+            <li><span>Rosemary</span><span class="plus-icon">+</span></li>
+            <li><span>Jamun</span><span class="plus-icon">+</span></li>
+            <li><span>Guava</span><span class="plus-icon">+</span></li>
+            <li><span>Pomegranate</span><span class="plus-icon">+</span></li>
+            <li><span>Neem</span><span class="plus-icon">+</span></li>
+            <li><span>Avocado</span><span class="plus-icon">+</span></li>
+            <li><span>Watermelon</span><span class="plus-icon">+</span></li>
+            <li><span>Hibiscus</span><span class="plus-icon">+</span></li>
+            <li><span>Peaches &amp; Lemon</span><span class="plus-icon">+</span></li>
+            <li><span>Flaxseed</span><span class="plus-icon">+</span></li>
+          </ul>
+        </div>
+        <div class="box-accordion mobile-box-accordion kids-accordion" data-group="mobile">
+          <button class="box-accordion__toggle" type="button" aria-expanded="false">
+            <div class="box-accordion__title">
+              <span>Infinium Kids</span>
+            </div>
+            <span class="box-caret" aria-hidden="true"></span>
+          </button>
+          <ul class="box-accordion__list category-list" hidden>
+            <li><span>Nutrition</span><span class="plus-icon">+</span></li>
+            <li><span>Personal Care</span><span class="plus-icon">+</span></li>
+          </ul>
+        </div>
+        <button class="menu-item emoji">😄 Mini Store</button>
+        <button class="menu-item emoji">🥳 New Launches</button>
+        <button class="menu-item emoji">💖 Gifting</button>
+        <button class="menu-item emoji">🔥 Hot Pricing</button>
+        <button class="menu-item emoji">💯 All Products</button>
+        <button class="menu-item">Patch Test Guide</button>
+      </div>
+      <div class="menu-list secondary">
+        <a class="menu-link icon phone" href="#">Download The App</a>
+        <a class="menu-link icon chat" href="#">Blogs</a>
+        <a class="menu-link icon truck" href="#">Track Order</a>
+        <a class="menu-link icon info" href="#">Our Story</a>
+        <a class="menu-link icon wallet" href="#">Wallet</a>
+        <a class="menu-link icon call" href="#">Contact Us</a>
+      </div>
+    </div>
+  </div>
+
   <div class="notice-bar desktop-only">
     <div class="shell notice-content">
-      <div class="notice-copy">
-        <span class="pill-chip">Hot</span>
-        <p>Black Friday Sale B2G2 is Live!</p>
-      </div>
-      <div class="notice-actions">
-        <button class="pill primary">Shop Now</button>
-      </div>
+      <p class="notice-text">Black Friday Sale B2G2 is Live!</p>
+      <button class="pill primary notice-cta">Shop Now</button>
     </div>
   </div>
 
@@ -28,9 +141,9 @@
         <button class="icon-button" aria-label="Open menu">
           <span class="icon-lines"></span>
         </button>
-        <div class="brand">
-          <span class="brand-main">PLIX</span>
-          <span class="brand-pill">PLIX kids</span>
+        <div class="brand-switch" role="group" aria-label="Switch between Infinium and Infinium kids">
+          <button class="brand-main active" type="button" data-target="main">Infinium</button>
+          <button class="brand-pill" type="button" data-target="kids">Infinium kids</button>
         </div>
       </div>
 
@@ -53,7 +166,7 @@
       <a href="#concern" class="nav-pill">Shop By Concern</a>
       <a href="#category" class="nav-pill">Shop By Category</a>
       <a href="#plant" class="nav-pill">Shop By Plant</a>
-      <a href="#kids" class="nav-pill">Plix Kids</a>
+      <a href="#kids" class="nav-pill">Infinium Kids</a>
       <a href="#mini" class="nav-pill">😄 Mini Store</a>
       <a href="#new" class="nav-pill">😍 New Launches</a>
       <a href="#gift" class="nav-pill">💖 Gifting</a>
@@ -152,7 +265,7 @@
           <div class="box-accordion mobile-box-accordion kids-accordion" data-group="mobile">
             <button class="box-accordion__toggle" type="button" aria-expanded="false">
               <div class="box-accordion__title">
-                <span>Plix Kids</span>
+                <span>Infinium Kids</span>
               </div>
               <span class="box-caret" aria-hidden="true"></span>
             </button>
@@ -342,6 +455,88 @@
       </div>
     </section>
 
+    <section class="section categories best-sellers">
+      <div class="shell">
+        <div class="section-head">
+          <div>
+            <h2>Best Sellers</h2>
+            <div class="tabs">
+              <button class="tab active">Weight</button>
+              <button class="tab">New Launches</button>
+              <button class="tab">Kids</button>
+              <button class="tab">Skin</button>
+              <button class="tab">Hair</button>
+              <button class="tab">Daily Wellness</button>
+              <button class="tab">Performance</button>
+            </div>
+          </div>
+          <a class="link-arrow" href="#concern">Shop all -></a>
+        </div>
+        <div class="carousel" data-target="bestsellers">
+          <button class="carousel-arrow prev" aria-label="Previous products">&lt;</button>
+          <div class="carousel-track">
+            <article class="product-card tall">
+              <div class="card-top">
+                <span class="card-badge">B2G2</span>
+              </div>
+              <div class="product-thumb" style="background-image:url('https://images.unsplash.com/photo-1553532435-93dce5de9aa6?auto=format&fit=crop&w=900&q=80');"></div>
+              <h3>Infinium Apple Cider Vinegar</h3>
+              <p class="product-meta">4.8 ★ | Weight · Pack of 4 tubes</p>
+              <div class="price-row">
+                <span class="price">₹1,245</span>
+              </div>
+              <div class="add-row">
+                <button class="pill ghost">+ ADD</button>
+              </div>
+            </article>
+            <article class="product-card tall">
+              <div class="card-top">
+                <span class="card-badge">B2G2</span>
+              </div>
+              <div class="product-thumb" style="background-image:url('https://images.unsplash.com/photo-1510626176961-4b37d0c4dcde?auto=format&fit=crop&w=900&q=80');"></div>
+              <h3>Infinium L-Carnitine ACV</h3>
+              <p class="product-meta">4.7 ★ | Weight · Pack of 4 tubes</p>
+              <div class="price-row">
+                <span class="price">₹1,420</span>
+              </div>
+              <div class="add-row">
+                <button class="pill ghost">+ ADD</button>
+              </div>
+            </article>
+            <article class="product-card tall">
+              <div class="card-top">
+                <span class="card-badge">GST 2.0</span>
+              </div>
+              <div class="product-thumb" style="background-image:url('https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&w=900&q=80');"></div>
+              <h3>Infinium Super Garcinia</h3>
+              <p class="product-meta">4.5 ★ | Weight · Pack of 4 tubes</p>
+              <div class="price-row">
+                <span class="price">₹1,245</span>
+              </div>
+              <div class="add-row">
+                <button class="pill ghost">+ ADD</button>
+              </div>
+            </article>
+            <article class="product-card tall">
+              <div class="card-top">
+                <span class="card-badge">B2G2</span>
+              </div>
+              <div class="product-thumb" style="background-image:url('https://images.unsplash.com/photo-1585238341267-1cfec2041459?auto=format&fit=crop&w=900&q=80');"></div>
+              <h3>Infinium ACV Multi Power</h3>
+              <p class="product-meta">4.6 ★ | Weight · Pack of 4 tubes</p>
+              <div class="price-row">
+                <span class="price">₹1,245</span>
+              </div>
+              <div class="add-row">
+                <button class="pill ghost">+ ADD</button>
+              </div>
+            </article>
+          </div>
+          <button class="carousel-arrow next" aria-label="Next products">&gt;</button>
+        </div>
+      </div>
+    </section>
+
     <section id="pricing" class="section under-club">
       <div class="shell">
         <div class="section-head">
@@ -485,7 +680,7 @@
         <div class="box-accordion kids-accordion" data-group="main">
           <button class="box-accordion__toggle" type="button" aria-expanded="false">
             <div class="box-accordion__title">
-              <span>Plix Kids</span>
+              <span>Infinium Kids</span>
             </div>
             <span class="box-caret" aria-hidden="true"></span>
           </button>
@@ -497,36 +692,32 @@
       </div>
     </section>
 
-    <section id="kids-hero" class="section hero-grid">
+    <section id="kids-hero" class="section hero-grid celeb-grid">
       <div class="shell">
         <div class="section-head">
           <div>
-            <p class="eyebrow">Celebrity-loved staples</p>
-            <h2>The Secret's Out: Celebs Love It Too!</h2>
+            <h2 class="celeb-title">The Secret's Out: Celebs Infinium It Too!</h2>
           </div>
         </div>
-        <div class="cards-grid">
-          <article class="hero-panel gradient-aqua">
-            <div class="panel-image"></div>
-            <div class="panel-overlay">
-              <h3>Rhea's Faves</h3>
-              <p>Glowy skin and hair staples curated for the spotlight.</p>
+        <div class="cards-grid celebs">
+          <article class="celeb-card">
+            <div class="celeb-image" style="background-image:url('https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80');"></div>
+            <div class="celeb-overlay">
+              <h3>Shraddha Kapoor's Faves</h3>
               <button class="pill primary">Shop Now</button>
             </div>
           </article>
-          <article class="hero-panel gradient-red">
-            <div class="panel-image"></div>
-            <div class="panel-overlay">
-              <h3>Arjun's Picks</h3>
-              <p>High-performance nutrition to keep up with the grind.</p>
+          <article class="celeb-card">
+            <div class="celeb-image" style="background-image:url('https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=900&q=80');"></div>
+            <div class="celeb-overlay">
+              <h3>Hardik Pandya's Faves</h3>
               <button class="pill primary">Shop Now</button>
             </div>
           </article>
-          <article class="hero-panel gradient-yellow">
-            <div class="panel-image"></div>
-            <div class="panel-overlay">
-              <h3>Sam's Essentials</h3>
-              <p>Everyday skin rituals, gentle enough for any routine.</p>
+          <article class="celeb-card">
+            <div class="celeb-image" style="background-image:url('https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=900&q=80');"></div>
+            <div class="celeb-overlay">
+              <h3>Shehnaaz Gill's Faves</h3>
               <button class="pill primary">Shop Now</button>
             </div>
           </article>
@@ -646,6 +837,211 @@
       </div>
     </section>
 
+    <section id="men-curated" class="section categories men-curated">
+      <div class="shell">
+        <div class="section-head">
+          <div>
+            <h2>Curated For Men</h2>
+            <div class="tabs">
+              <button class="tab active">Hair</button>
+              <button class="tab">Nutrition</button>
+              <button class="tab">Performance</button>
+              <button class="tab">Skin</button>
+            </div>
+          </div>
+          <a class="link-arrow" href="#men-curated">Shop all -></a>
+        </div>
+        <div class="carousel" data-target="men">
+          <button class="carousel-arrow prev" aria-label="Previous products">&lt;</button>
+          <div class="carousel-track">
+            <article class="product-card tall">
+              <div class="card-top">
+                <span class="card-badge">B2G2</span>
+              </div>
+              <div class="product-thumb" style="background-image:url('https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&w=1200&q=80');"></div>
+              <h3>Infinium Rosemary Hair Growth Serum</h3>
+              <p class="product-meta">4.3 ★ | Hair</p>
+              <div class="price-row">
+                <span class="price">₹699</span>
+              </div>
+              <div class="add-row">
+                <button class="pill ghost">+ ADD</button>
+              </div>
+            </article>
+            <article class="product-card tall">
+              <div class="card-top">
+                <span class="card-badge">B2G2</span>
+              </div>
+              <div class="product-thumb" style="background-image:url('https://images.unsplash.com/photo-1619596101816-4ae9f8d6d59f?auto=format&fit=crop&w=1200&q=80');"></div>
+              <h3>Infinium Neem Anti-Dandruff Shampoo</h3>
+              <p class="product-meta">4.3 ★ | Hair</p>
+              <div class="price-row">
+                <span class="price">₹355</span>
+              </div>
+              <div class="add-row">
+                <button class="pill ghost">+ ADD</button>
+              </div>
+            </article>
+            <article class="product-card tall">
+              <div class="card-top">
+                <span class="card-badge">B2G2</span>
+              </div>
+              <div class="product-thumb" style="background-image:url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1200&q=80');"></div>
+              <h3>Infinium Anti-Hairfall Shampoo</h3>
+              <p class="product-meta">4.2 ★ | Hair</p>
+              <div class="price-row">
+                <span class="price">₹355</span>
+              </div>
+              <div class="add-row">
+                <button class="pill ghost">+ ADD</button>
+              </div>
+            </article>
+            <article class="product-card tall">
+              <div class="card-top">
+                <span class="card-badge">B2G2</span>
+              </div>
+              <div class="product-thumb" style="background-image:url('https://images.unsplash.com/photo-1506617420156-8e4536971650?auto=format&fit=crop&w=1200&q=80');"></div>
+              <h3>Infinium Neem Anti-Dandruff Serum</h3>
+              <p class="product-meta">4.4 ★ | Hair</p>
+              <div class="price-row">
+                <span class="price">₹500</span>
+              </div>
+              <div class="add-row">
+                <button class="pill ghost">+ ADD</button>
+              </div>
+            </article>
+          </div>
+          <button class="carousel-arrow next" aria-label="Next products">&gt;</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="skin-curated" class="section curated-block skin-block">
+      <div class="shell curated-grid">
+        <div class="curated-promo">
+          <div class="curated-tag">Skin</div>
+          <p class="curated-desc">Gentle, effective care for clear, calm skin.</p>
+          <button class="pill primary">Shop All</button>
+        </div>
+        <div class="carousel" data-target="skinline">
+          <button class="carousel-arrow prev" aria-label="Previous products">&lt;</button>
+          <div class="carousel-track">
+            <article class="product-card tall">
+              <div class="card-top">
+                <span class="card-badge">B2G2</span>
+                <span class="card-badge mini">-26%</span>
+              </div>
+              <div class="product-thumb" style="background-image:url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1200&q=80');"></div>
+              <h3>Infinium Pineapple Face Wash &amp; Serum</h3>
+              <p class="product-meta">4.3 ★ | Skin</p>
+              <div class="price-row">
+                <span class="old">₹950</span>
+                <span class="price">₹699</span>
+              </div>
+              <div class="add-row">
+                <button class="pill ghost">+ ADD</button>
+              </div>
+            </article>
+            <article class="product-card tall">
+              <div class="card-top">
+                <span class="card-badge">B2G2</span>
+                <span class="card-badge mini">-31%</span>
+              </div>
+              <div class="product-thumb" style="background-image:url('https://images.unsplash.com/photo-1506617420156-8e4536971650?auto=format&fit=crop&w=1200&q=80');"></div>
+              <h3>Infinium Jamun Facewash &amp; Serum</h3>
+              <p class="product-meta">4.3 ★ | Skin</p>
+              <div class="price-row">
+                <span class="old">₹950</span>
+                <span class="price">₹649</span>
+              </div>
+              <div class="add-row">
+                <button class="pill ghost">+ ADD</button>
+              </div>
+            </article>
+            <article class="product-card tall">
+              <div class="card-top">
+                <span class="card-badge">B2G2</span>
+                <span class="card-badge mini">-32%</span>
+              </div>
+              <div class="product-thumb" style="background-image:url('https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&w=1200&q=80');"></div>
+              <h3>Infinium Pineapple De-Pigmentation Kit</h3>
+              <p class="product-meta">4.3 ★ | Skin</p>
+              <div class="price-row">
+                <span class="old">₹1,475</span>
+                <span class="price">₹999</span>
+              </div>
+              <div class="add-row">
+                <button class="pill ghost">+ ADD</button>
+              </div>
+            </article>
+          </div>
+          <button class="carousel-arrow next" aria-label="Next products">&gt;</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="hair-curated" class="section curated-block hair-block">
+      <div class="shell curated-grid">
+        <div class="curated-promo">
+          <div class="curated-tag">Hair</div>
+          <p class="curated-desc">Strengthen roots and smooth strands with botanical care.</p>
+          <button class="pill primary">Shop All</button>
+        </div>
+        <div class="carousel" data-target="hairline">
+          <button class="carousel-arrow prev" aria-label="Previous products">&lt;</button>
+          <div class="carousel-track">
+            <article class="product-card tall">
+              <div class="card-top">
+                <span class="card-badge">B2G2</span>
+                <span class="card-badge mini">-6%</span>
+              </div>
+              <div class="product-thumb" style="background-image:url('https://images.unsplash.com/photo-1585238341466-49c1cf8571fa?auto=format&fit=crop&w=1200&q=80');"></div>
+              <h3>Infinium Flaxseed Keratin Shampoo</h3>
+              <p class="product-meta">4.3 ★ | Hair</p>
+              <div class="price-row">
+                <span class="old">₹750</span>
+                <span class="price">₹699</span>
+              </div>
+              <div class="add-row">
+                <button class="pill ghost">+ ADD</button>
+              </div>
+            </article>
+            <article class="product-card tall">
+              <div class="card-top">
+                <span class="card-badge">B2G2</span>
+                <span class="card-badge mini">-22%</span>
+              </div>
+              <div class="product-thumb" style="background-image:url('https://images.unsplash.com/photo-1585238342026-78d387f4a707?auto=format&fit=crop&w=1200&q=80');"></div>
+              <h3>Infinium Flaxseed Ultra Smooth Duo</h3>
+              <p class="product-meta">4.4 ★ | Hair</p>
+              <div class="price-row">
+                <span class="price">₹699</span>
+              </div>
+              <div class="add-row">
+                <button class="pill ghost">+ ADD</button>
+              </div>
+            </article>
+            <article class="product-card tall">
+              <div class="card-top">
+                <span class="card-badge">B2G2</span>
+                <span class="card-badge mini">-6%</span>
+              </div>
+              <div class="product-thumb" style="background-image:url('https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&w=1200&q=80');"></div>
+              <h3>Infinium Rosemary Hair Growth Serum</h3>
+              <p class="product-meta">4.3 ★ | Hair</p>
+              <div class="price-row">
+                <span class="price">₹699</span>
+              </div>
+              <div class="add-row">
+                <button class="pill ghost">+ ADD</button>
+              </div>
+            </article>
+          </div>
+          <button class="carousel-arrow next" aria-label="Next products">&gt;</button>
+        </div>
+      </div>
+    </section>
+
     <section id="testimonials" class="section testimonials">
       <div class="shell">
         <div class="section-head">
@@ -751,24 +1147,24 @@
   </main>
 
   <footer class="footer">
-    <div class="shell footer-main">
+    <div class="footer-main">
       <div class="footer-brand">
-        <div class="brand-mark">Infinium</div>
-        <p>Stalk our socials</p>
+        <div class="brand-mark footer-logo">Infinium</div>
+        <p class="footer-sub">Stalk our socials</p>
         <div class="socials">
-          <span>YT</span>
-          <span>IG</span>
-          <span>TT</span>
-          <span>IN</span>
+          <span class="social-icon">IG</span>
+          <span class="social-icon">YT</span>
+          <span class="social-icon">FB</span>
+          <span class="social-icon">IN</span>
         </div>
         <div class="store-buttons">
-          <button class="pill ghost dark">Get on Play</button>
-          <button class="pill ghost dark">Get on App Store</button>
+          <button class="store-btn">Google Play</button>
+          <button class="store-btn">App Store</button>
         </div>
         <div class="signup">
-          <p>Sign up for exclusive deals and offers</p>
+          <p class="signup-title">Sign up for exclusive deals and offers</p>
           <button class="pill primary">Sign Up</button>
-          <small>By signing up, you agree to our privacy policy</small>
+          <small>By signing up, you agree to our Privacy Policy</small>
         </div>
       </div>
       <div class="footer-links">
@@ -779,13 +1175,17 @@
           <a href="#">Daily Wellbeing</a>
           <a href="#">Performance</a>
           <a href="#">Hair</a>
+          <a href="#">Report an error</a>
         </div>
         <div>
           <h4>Learn</h4>
           <a href="#">Blog</a>
           <a href="#">Our Story</a>
           <a href="#">Personal Guidance</a>
-          <a href="#">Loyalty Club</a>
+          <a href="#">Cashback</a>
+          <a href="#">Clean Label Project</a>
+          <a href="#">Pledge A Tree</a>
+          <a href="#">Patch Test Guide</a>
           <a href="#">Press</a>
         </div>
         <div>
@@ -796,37 +1196,42 @@
         </div>
         <div>
           <h4>My Account</h4>
-          <a href="#">Login -></a>
+          <a href="#">Login</a>
         </div>
         <div>
           <h4>Connect</h4>
           <a href="#">Customer Care Details</a>
-          <a href="#">Chat with us</a>
+          <a href="#">Chat with us on WhatsApp</a>
           <a href="#">Track your order</a>
-          <a href="#">Bugs & Suggestions</a>
-          <a href="#">Careers</a>
+          <a href="#">Bugs & Suggestion</a>
+          <a href="#">Career</a>
         </div>
       </div>
     </div>
+    <div class="footer-banner">
+      <span>Gluten Free</span>
+      <span>Non-GMO</span>
+      <span>Soy Free</span>
+      <span>Plant-Based</span>
+      <span>Gluten Free</span>
+      <span>Non-GMO</span>
+      <span>Soy Free</span>
+      <span>Plant-Based</span>
+    </div>
     <div class="footer-bottom">
-      <div class="marquee">
-        <span>Non-GMO</span>
-        <span>-</span>
-        <span>Soy Free</span>
-        <span>-</span>
-        <span>Plant Based</span>
-        <span>-</span>
-        <span>Gluten Free</span>
-      </div>
       <div class="payments">
-        <span>Safe & Secure Payment Processing</span>
+        <span class="secure">Safe & Secure Payment Processing</span>
         <div class="cards">
-          <span>VISA</span>
+          <span>Visa</span>
           <span>RuPay</span>
           <span>UPI</span>
           <span>Mastercard</span>
           <span>Amex</span>
         </div>
+      </div>
+      <div class="footer-meta">
+        <span>© Infinium</span>
+        <span>Certificates</span>
       </div>
     </div>
   </footer>
