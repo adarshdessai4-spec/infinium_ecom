@@ -201,6 +201,7 @@ const addToCartBtn = document.getElementById('builder-add-to-cart');
 const builderModal = document.getElementById('builder-modal');
 const builderCloseBtn = document.getElementById('builder-close');
 const modalBackdrop = document.querySelector('.builder-modal__backdrop');
+const allProductsGrid = document.getElementById('all-products-grid');
 
 const builderState = {
   option: null,
@@ -261,6 +262,55 @@ function renderProducts() {
     card.appendChild(priceRow);
     card.appendChild(button);
     productsContainer.appendChild(card);
+  });
+}
+
+function renderAllProducts() {
+  if (!allProductsGrid) return;
+  allProductsGrid.innerHTML = '';
+  builderProducts.forEach((product) => {
+    const card = document.createElement('article');
+    card.className = 'product-card tall';
+
+    const top = document.createElement('div');
+    top.className = 'card-top';
+    const badge = document.createElement('span');
+    badge.className = 'card-badge';
+    badge.textContent = 'B2G2';
+    top.appendChild(badge);
+    card.appendChild(top);
+
+    if (product.image) {
+      const img = document.createElement('div');
+      img.className = 'product-thumb';
+      img.style.backgroundImage = `url('${product.image}')`;
+      card.appendChild(img);
+    }
+
+    const h3 = document.createElement('h3');
+    h3.textContent = product.name;
+    card.appendChild(h3);
+
+    const meta = document.createElement('p');
+    meta.className = 'product-meta';
+    meta.textContent = product.note;
+    card.appendChild(meta);
+
+    const priceRow = document.createElement('div');
+    priceRow.className = 'price-row';
+    const price = document.createElement('span');
+    price.className = 'price';
+    price.textContent = `₹${product.price}`;
+    priceRow.appendChild(price);
+    card.appendChild(priceRow);
+
+    const btn = document.createElement('button');
+    btn.className = 'pill ghost';
+    btn.textContent = '+ Add';
+    btn.addEventListener('click', () => handleAddProduct(product));
+    card.appendChild(btn);
+
+    allProductsGrid.appendChild(card);
   });
 }
 
@@ -384,6 +434,9 @@ function initBuilder() {
 }
 
 initBuilder();
+
+// Render shop-all grid if present
+renderAllProducts();
 
 // Desktop Infinium / Infinium kids toggle
 const brandSwitchButtons = document.querySelectorAll('.brand-switch button[data-target]');

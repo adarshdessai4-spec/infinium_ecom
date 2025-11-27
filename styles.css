@@ -565,6 +565,22 @@ img {
   min-width: 320px;
 }
 
+.all-products {
+  background: #ffffff;
+}
+
+.all-products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 14px;
+}
+
+@media (max-width: 600px) {
+  .all-products-grid {
+    grid-template-columns: repeat(2, minmax(140px, 1fr));
+  }
+}
+
 .product-thumb {
   height: 320px;
   border-radius: 14px;
