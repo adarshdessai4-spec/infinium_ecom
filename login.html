@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Infinium | Login</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="login-body">
+  <div class="login-shell">
+    <div class="login-top-row">
+      <a class="login-back" href="index.html" aria-label="Back to home">← Back to Home</a>
+      <span class="login-help-text">Need help? <a href="mailto:care@infinium.com">care@infinium.com</a></span>
+    </div>
+
+    <div class="login-card">
+      <div class="login-panel login-panel--brand">
+        <button class="login-close" type="button" aria-label="Close login" onclick="window.history.back()">✕</button>
+        <div class="login-brand-row">
+          <div class="login-logo">Infinium</div>
+          <div class="login-powered">
+            <span class="powered-label">Powered by</span>
+            <span class="powered-name">KwikPass</span>
+          </div>
+        </div>
+        <h2 class="login-headline">Access orders, track orders, redeem Infinium cash!</h2>
+        <div class="login-pill">
+          <span class="benefit-icon">🔒</span>
+          <span>100% secure &amp; spam free</span>
+          <span class="pill-dots" aria-hidden="true">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          </span>
+        </div>
+        <div class="login-benefits">
+          <div class="benefit-card">
+            <span class="benefit-icon">✨</span>
+            <h4>Zero Subscription Fees</h4>
+            <p>Access KwikPass without any subscription charges.</p>
+          </div>
+          <div class="benefit-card">
+            <span class="benefit-icon">💸</span>
+            <h4>Lowest price guaranteed</h4>
+            <p>Explore unbeatable prices and unmatchable value.</p>
+          </div>
+          <div class="benefit-card">
+            <span class="benefit-icon">🔒</span>
+            <h4>100% secure &amp; spam free</h4>
+            <p>Guaranteed data protection &amp; a spam-free inbox.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="login-panel login-panel--form">
+        <div>
+          <p class="eyebrow">Welcome back</p>
+          <h3 class="login-title">Unlock Superior Discounts</h3>
+        </div>
+        <form id="login-form" class="login-form" novalidate>
+          <label class="login-input-wrap" for="login-phone">
+            <span class="login-flag" aria-hidden="true">🇮🇳</span>
+            <span class="login-prefix">+91</span>
+            <input id="login-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="Enter Mobile Number" required>
+          </label>
+
+          <label class="login-check">
+            <input id="login-updates" name="updates" type="checkbox" checked>
+            <span>Notify me for any updates &amp; offers</span>
+          </label>
+
+          <button type="submit" class="pill primary login-submit">Get OTP</button>
+          <p id="login-status" class="login-status">We’ll send a one-time password to your mobile.</p>
+
+          <p class="login-legal">
+            I accept that I have read &amp; understood Infinium’s
+            <a href="#" aria-label="Privacy Policy">Privacy Policy</a> and
+            <a href="#" aria-label="Terms and Conditions">T&amp;Cs</a>.
+          </p>
+          <a class="login-help" href="mailto:care@infinium.com">Trouble logging in?</a>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

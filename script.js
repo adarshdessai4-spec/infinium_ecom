@@ -438,6 +438,23 @@ initBuilder();
 // Render shop-all grid if present
 renderAllProducts();
 
+// Ship/Cart/Account actions
+document.querySelectorAll('[data-action]').forEach((btn) => {
+  btn.addEventListener('click', () => {
+    const action = btn.dataset.action;
+    if (action === 'ship' || action === 'cart') {
+      window.location.href = 'shop-all.html';
+    } else if (action === 'account') {
+      const accountSection = document.getElementById('account-section');
+      if (accountSection) {
+        accountSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else {
+        window.location.href = 'shop-all.html#account-section';
+      }
+    }
+  });
+});
+
 // Desktop Infinium / Infinium kids toggle
 const brandSwitchButtons = document.querySelectorAll('.brand-switch button[data-target]');
 
@@ -466,4 +483,41 @@ function closeBuilder() {
   if (!builderModal) return;
   builderModal.classList.remove('open');
   builderModal.setAttribute('aria-hidden', 'true');
+}
+
+// Login form handling
+const loginForm = document.getElementById('login-form');
+const loginPhoneInput = document.getElementById('login-phone');
+const loginStatus = document.getElementById('login-status');
+
+if (loginForm && loginPhoneInput && loginStatus) {
+  const inputWrap = loginPhoneInput.closest('.login-input-wrap');
+
+  const setStatus = (message, type = 'info') => {
+    loginStatus.textContent = message;
+    loginStatus.classList.remove('error', 'success');
+    if (type === 'error') loginStatus.classList.add('error');
+    if (type === 'success') loginStatus.classList.add('success');
+  };
+
+  loginForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const digits = (loginPhoneInput.value || '').replace(/\D/g, '');
+    const isValid = digits.length === 10;
+
+    if (!isValid) {
+      inputWrap?.classList.add('error');
+      setStatus('Enter a valid 10-digit mobile number to continue.', 'error');
+      loginPhoneInput.focus();
+      return;
+    }
+
+    inputWrap?.classList.remove('error');
+    setStatus(`OTP sent to +91 ${digits.slice(0, 5)}*****`, 'success');
+  });
+
+  loginPhoneInput.addEventListener('input', () => {
+    inputWrap?.classList.remove('error');
+    setStatus('We’ll send a one-time password to your mobile.');
+  });
 }
