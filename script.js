@@ -347,26 +347,47 @@ function renderSlots() {
     const slotEl = document.createElement('div');
     slotEl.className = `slot${slot ? ' filled' : ''}`;
 
-    const label = document.createElement('div');
-    label.className = 'slot-name';
-    label.textContent = slot ? slot.name : `Item ${index + 1}`;
-    slotEl.appendChild(label);
-
     if (slot) {
-      const meta = document.createElement('div');
-      meta.className = 'subtle';
-      meta.textContent = slot.note;
-      slotEl.appendChild(meta);
+      const topRow = document.createElement('div');
+      topRow.className = 'slot-top';
 
-      const actions = document.createElement('div');
-      actions.className = 'slot-actions';
+      const thumb = document.createElement('div');
+      thumb.className = 'slot-thumb';
+      if (slot.image) {
+        thumb.style.backgroundImage = `url('${slot.image}')`;
+      } else {
+        thumb.textContent = slot.name?.[0] || '?';
+      }
+      topRow.appendChild(thumb);
+
+      const info = document.createElement('div');
+      info.className = 'slot-info';
+
+      const label = document.createElement('div');
+      label.className = 'slot-name';
+      label.textContent = slot.name;
+      info.appendChild(label);
+
+      const tag = document.createElement('div');
+      tag.className = 'slot-tag';
+      tag.textContent = slot.note;
+      info.appendChild(tag);
+
+      topRow.appendChild(info);
+      slotEl.appendChild(topRow);
+
       const removeBtn = document.createElement('button');
-      removeBtn.className = 'pill ghost';
+      removeBtn.className = 'slot-remove';
       removeBtn.type = 'button';
-      removeBtn.textContent = 'Remove';
+      removeBtn.setAttribute('aria-label', `Remove ${slot.name} from box`);
+      removeBtn.textContent = '✕';
       removeBtn.addEventListener('click', () => removeSlot(index));
-      actions.appendChild(removeBtn);
-      slotEl.appendChild(actions);
+      slotEl.appendChild(removeBtn);
+    } else {
+      const label = document.createElement('div');
+      label.className = 'slot-name';
+      label.textContent = `Item ${index + 1}`;
+      slotEl.appendChild(label);
     }
 
     slotsContainer.appendChild(slotEl);
